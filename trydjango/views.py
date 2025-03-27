@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 
-HTML_RESPONSE = """
-<h1>Hello Solomon</h1>
+name = "Solomon"
+HTML_RESPONSE = f"""
+<h1>Hello {name}</h1>
 """
 
 def home(request):
