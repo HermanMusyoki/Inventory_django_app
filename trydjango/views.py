@@ -16,7 +16,7 @@ context = {
 #article_content = article_obj.content
 
 
-HTML_RESPONSE = render_to_string("home.html",context= context)
+HTML_RESPONSE = render_to_string("base.html",context= context)
 #HTML_RESPONSE = """
 #<h1> {id} {title}</h1>
 #<h4>{content}</h4>

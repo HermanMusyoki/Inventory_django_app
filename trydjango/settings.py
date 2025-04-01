@@ -57,7 +57,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             BASE_DIR / "templates",
-            'C:/Users/solomon.musyoki/Dev/try-django/templates',
+           "C:\\Users\\solomon.musyoki\\Dev\\try-django\\templates",
             ],
         'APP_DIRS': True,
         'OPTIONS': {
