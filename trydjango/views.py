@@ -1,12 +1,12 @@
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 from articles.models import Article
-from random import random
+import random
 
 randomId = random.randint(1, 4)
 
 #from database
-article_obj = Article.objects.get(randomId)
+article_obj = Article.objects.get(id=1)
 article_queryset = Article.objects.all()
 
 context = {
