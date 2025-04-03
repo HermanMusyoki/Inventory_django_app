@@ -4,7 +4,7 @@ from articles.models import Article
 import random
 
 
-def home(request):
+def home(request, id=None):
     randomId = random.randint(1, 4)
 
     #from database
