@@ -20,8 +20,6 @@ def home(request, id=None):
         }
     #article_title = article_obj.title
     #article_content = article_obj.content
-
-
     HTML_RESPONSE = render_to_string("base.html",context= context)
     #HTML_RESPONSE = """
     #<h1> {id} {title}</h1>
@@ -29,3 +27,16 @@ def home(request, id=None):
     #""".format(**context)
 
     return HttpResponse(HTML_RESPONSE)
+
+    def article_detail_view(request, id=None):
+        article_obj = None
+        if id is not None:
+            article_obj = Article.objects.get(id=id)
+        context = {
+            "object" : article_obj,
+        }
+
+        return render(request, "articles/search.html", context= context)
+
+
+    
