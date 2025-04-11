@@ -1,8 +1,12 @@
 from django.db import models
+from django.db.models import Q
 
 class ArticleManager(models.manager):
-    def search(self, query):
-        return Article.objects.filter(title__icontains = query)
+    def search(self, query= None):
+        if query is None or query == "":
+            return self.get_queryset().none()
+        lookups = Q(title__icontains = query) | Q(content__icontains = query)
+        return Article.objects.filter(lookups)
 
 # Create your models here.
 
