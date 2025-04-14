@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models import Q
 
-class ArticleManager(models.manager):
+class ArticleManager(models.Manager):
     def search(self, query= None):
         if query is None or query == "":
             return self.get_queryset().none()
